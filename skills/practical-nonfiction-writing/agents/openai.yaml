@@ -1,0 +1,4 @@
+interface:
+  display_name: "Practical Nonfiction Writing"
+  short_description: "실용서, 비즈니스서, 자기계발서를 실행형 구조로 설계합니다."
+  default_prompt: "Use $practical-nonfiction-writing to design this practical nonfiction book."

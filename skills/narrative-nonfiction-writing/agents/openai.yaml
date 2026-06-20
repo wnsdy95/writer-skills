@@ -1,0 +1,4 @@
+interface:
+  display_name: "Narrative Nonfiction Writing"
+  short_description: "회고록, 전기, 역사, 르포형 논픽션을 설계합니다."
+  default_prompt: "Use $narrative-nonfiction-writing to plan this real-event narrative book."

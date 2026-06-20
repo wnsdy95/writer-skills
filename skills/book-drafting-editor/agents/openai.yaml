@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Drafting Editor"
+  short_description: "초고 작성, 개정, 개발편집 흐름을 설계합니다."
+  default_prompt: "Use $book-drafting-editor to plan drafting and revision passes."

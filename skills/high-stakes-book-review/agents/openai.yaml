@@ -1,0 +1,4 @@
+interface:
+  display_name: "High Stakes Book Review"
+  short_description: "고위험 원고의 근거, 윤리, 법적 위험을 점검합니다."
+  default_prompt: "Use $high-stakes-book-review to review this high-risk book project."

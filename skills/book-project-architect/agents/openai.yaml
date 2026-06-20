@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Project Architect"
+  short_description: "책 아이디어를 분류하고 집필 흐름으로 라우팅합니다."
+  default_prompt: "Use $book-project-architect to diagnose this book idea and route it into a writing plan."

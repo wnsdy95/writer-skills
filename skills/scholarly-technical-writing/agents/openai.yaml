@@ -1,0 +1,4 @@
+interface:
+  display_name: "Scholarly Technical Writing"
+  short_description: "학술서와 기술서의 논지, 근거, 설명 구조를 설계합니다."
+  default_prompt: "Use $scholarly-technical-writing to plan this technical or scholarly book."

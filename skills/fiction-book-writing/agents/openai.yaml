@@ -1,0 +1,4 @@
+interface:
+  display_name: "Fiction Book Writing"
+  short_description: "플롯, 인물, 장면, 복선 회수를 갖춘 소설을 설계합니다."
+  default_prompt: "Use $fiction-book-writing to design a serious novel structure."

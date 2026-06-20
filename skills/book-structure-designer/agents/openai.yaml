@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Structure Designer"
+  short_description: "책의 콘셉트, 목차, 챕터 구조를 설계합니다."
+  default_prompt: "Use $book-structure-designer to design the concept and table of contents."

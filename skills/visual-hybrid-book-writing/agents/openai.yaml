@@ -1,0 +1,4 @@
+interface:
+  display_name: "Visual Hybrid Book Writing"
+  short_description: "그림책, 만화, 사진집 등 시각 중심 도서를 설계합니다."
+  default_prompt: "Use $visual-hybrid-book-writing to plan this visual book."

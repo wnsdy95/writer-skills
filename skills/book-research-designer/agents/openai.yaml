@@ -1,0 +1,4 @@
+interface:
+  display_name: "Book Research Designer"
+  short_description: "책 프로젝트에 맞는 리서치와 출처 검증을 설계합니다."
+  default_prompt: "Use $book-research-designer to design a research plan for this book."
