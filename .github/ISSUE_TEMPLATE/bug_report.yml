@@ -1,0 +1,33 @@
+name: Bug report
+description: Report a broken skill, template, validator, or repository workflow.
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What is broken or confusing?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Include the skill, file path, command, or prompt involved.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: textarea
+    id: risk
+    attributes:
+      label: Risk or impact
+      description: Note any privacy, evidence, safety, or high-stakes content impact.
+    validations:
+      required: false

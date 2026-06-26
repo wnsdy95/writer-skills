@@ -2,7 +2,26 @@
 set -euo pipefail
 
 ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-VALIDATOR="/Users/dev/.aenv/envs/default/codex/skills/.system/skill-creator/scripts/quick_validate.py"
+VALIDATOR="${SKILL_CREATOR_VALIDATOR:-}"
+
+if [[ -z "$VALIDATOR" ]]; then
+  candidates=(
+    "${CODEX_HOME:-$HOME/.codex}/skills/.system/skill-creator/scripts/quick_validate.py"
+    "$HOME/.aenv/envs/default/codex/skills/.system/skill-creator/scripts/quick_validate.py"
+  )
+
+  for candidate in "${candidates[@]}"; do
+    if [[ -f "$candidate" ]]; then
+      VALIDATOR="$candidate"
+      break
+    fi
+  done
+fi
+
+if [[ -z "$VALIDATOR" || ! -f "$VALIDATOR" ]]; then
+  echo "missing skill validator; set SKILL_CREATOR_VALIDATOR=/path/to/quick_validate.py" >&2
+  exit 1
+fi
 
 cd "$ROOT"
 

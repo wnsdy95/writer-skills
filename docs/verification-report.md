@@ -65,7 +65,8 @@ This pass added source-grounded research coverage for:
 The local `python3` environment did not include `yaml`, so direct validator execution failed. The implementation now uses:
 
 ```bash
-uv run --with pyyaml python /Users/dev/.aenv/envs/default/codex/skills/.system/skill-creator/scripts/quick_validate.py <skill>
+export SKILL_CREATOR_VALIDATOR=/path/to/skill-creator/scripts/quick_validate.py
+scripts/verify-writer-collections.sh
 ```
 
 Updated:
