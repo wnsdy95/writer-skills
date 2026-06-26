@@ -1,5 +1,11 @@
 # Writer Skills
 
+[![License: MIT](https://img.shields.io/github/license/wnsdy95/writer-skills?style=flat-square)](LICENSE)
+![Codex Skills](https://img.shields.io/badge/Codex-Skills-111827?style=flat-square)
+![Markdown](https://img.shields.io/badge/Markdown-Docs-000000?style=flat-square&logo=markdown)
+![YAML](https://img.shields.io/badge/YAML-Agent%20Metadata-CB171E?style=flat-square&logo=yaml&logoColor=white)
+![Shell](https://img.shields.io/badge/Shell-Verification-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
+
 Writer Skills는 책 프로젝트를 진단하고 필요한 리서치, 구조 설계, 집필, 개정, 검증 흐름으로 라우팅하는 Codex skill 모음입니다.
 
 주 사용자는 한국어로 책을 쓰는 작가, 편집자, 기획자입니다. 단순 조언보다 명명된 산출물, 체크리스트, 장부, 검증 기준을 우선합니다.
