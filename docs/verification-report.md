@@ -4,8 +4,7 @@
 
 This report verifies implementation against:
 
-- `docs/writer-collections-advanced-plan.md`
-- `docs/implementation-spec.md`
+- `README.md`
 - `docs/skill-contracts.md`
 - `docs/story-bible-schema.md`
 
@@ -71,7 +70,7 @@ scripts/verify-writer-collections.sh
 
 Updated:
 
-- `docs/implementation-spec.md`
+- `README.md`
 - `scripts/verify-writer-collections.sh`
 
 ### Finding 2: generated default prompts lost `$skill-name`
