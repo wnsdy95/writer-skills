@@ -6,9 +6,9 @@
 ![YAML](https://img.shields.io/badge/YAML-Agent%20Metadata-CB171E?style=flat-square&logo=yaml&logoColor=white)
 ![Shell](https://img.shields.io/badge/Shell-Verification-4EAA25?style=flat-square&logo=gnubash&logoColor=white)
 
-Writer Skills는 책 프로젝트를 진단하고 필요한 리서치, 구조 설계, 집필, 개정, 검증 흐름으로 라우팅하는 Codex skill 모음입니다.
+Writer Skills is a collection of Codex skill packages, reference files, and reusable templates for planning, researching, drafting, editing, and reviewing book projects.
 
-주 사용자는 한국어로 책을 쓰는 작가, 편집자, 기획자입니다. 단순 조언보다 명명된 산출물, 체크리스트, 장부, 검증 기준을 우선합니다.
+The project is designed for writers, editors, and publishing workflows that need concrete deliverables instead of generic writing advice. Skills are expected to end with named outputs such as diagnoses, research plans, chapter cards, revision checklists, risk registers, continuity ledgers, and next-action plans.
 
 ## Quick Start
 
@@ -17,11 +17,11 @@ git clone https://github.com/wnsdy95/writer-skills.git
 cd writer-skills
 ```
 
-사용할 skill package를 `skills/`에서 Codex skills 디렉터리로 복사하거나, 이 저장소를 skill/source collection으로 두고 필요한 파일을 가져가면 됩니다.
+Copy the skill packages you want from `skills/` into a Codex skills directory, or use this repository as a source collection for your own writing workflow.
 
-복잡한 소설 프로젝트에서는 `story-bible-template/`를 프로젝트 안의 `story-bible/`로 복사한 뒤 canon, 인물, 타임라인, 장면, setup/payoff, revision queue의 기준 문서로 사용합니다.
+For complex fiction projects, copy `story-bible-template/` into your project as `story-bible/` and use it as the source of truth for canon, characters, timelines, scenes, relationships, setup/payoff, continuity issues, and revision needs.
 
-예시 요청:
+Example prompts:
 
 ```text
 Use $book-project-architect to diagnose this book idea and route the next workflow.
@@ -31,19 +31,19 @@ Use $high-stakes-book-review to review this chapter for evidence and reader-harm
 
 ## Skills
 
-- `book-project-architect`: 책 아이디어를 분류하고 필요한 작업 흐름으로 라우팅합니다.
-- `book-research-designer`: 리서치, 출처 품질, 팩트체크 계획을 설계합니다.
-- `book-structure-designer`: 콘셉트, 독자 약속, 목차, 챕터 카드를 설계합니다.
-- `book-drafting-editor`: 초고 작성, 개정 패스, 원고 품질 점검을 관리합니다.
-- `fiction-book-writing`: 플롯, 인물 아크, 장면, 시점, 복선과 회수를 설계합니다.
-- `fiction-story-bible-manager`: canon, 타임라인, 장면, 관계, setup/payoff, 연속성, revision queue를 관리합니다.
-- `narrative-nonfiction-writing`: 실제 사건, 기억, 인터뷰, 아카이브를 서사 구조로 정리합니다.
-- `practical-nonfiction-writing`: 독자 변화, 프레임워크, 연습, 체크리스트를 설계합니다.
-- `scholarly-technical-writing`: 학술, 기술, 전문 분야의 논지, 개념, 근거, 설명 구조를 설계합니다.
-- `visual-hybrid-book-writing`: 이미지, 캡션, 펼침면, 패널, 레시피, 시각 순서가 핵심인 책을 설계합니다.
-- `high-stakes-book-review`: 의료, 법률, 금융, 범죄, 정치, 실명 인물, 취약 집단 등 고위험 원고를 검토합니다.
+- `book-project-architect`: classifies a book idea and routes it into the right workflow.
+- `book-research-designer`: designs research, source-quality, and fact-checking plans.
+- `book-structure-designer`: turns ideas and research into concepts, tables of contents, and chapter cards.
+- `book-drafting-editor`: plans drafting loops, revision passes, and manuscript quality checks.
+- `fiction-book-writing`: designs fiction through plot, character arcs, scenes, POV, pacing, and payoff.
+- `fiction-story-bible-manager`: maintains canon, timelines, scenes, relationships, setup/payoff, continuity, and revision queues.
+- `narrative-nonfiction-writing`: structures real-event storytelling with evidence-aware narrative design.
+- `practical-nonfiction-writing`: builds reader transformation frameworks, exercises, and checklists.
+- `scholarly-technical-writing`: plans scholarly, technical, professional, and research-based books.
+- `visual-hybrid-book-writing`: designs books where text, image, spread, caption, panel, recipe, or visual sequence is structural.
+- `high-stakes-book-review`: reviews manuscripts for evidence, ethics, privacy, legal exposure, and reader harm.
 
-## Layout
+## Repository Layout
 
 ```text
 skills/                 Codex skill packages
@@ -55,22 +55,22 @@ scripts/                Local verification scripts
 
 ## Requirements
 
-- Codex environment with custom skill support
+- A Codex environment with custom skill support
 - `uv` for running the verification script
-- Codex `skill-creator` validator only if you want to validate package structure locally
+- The Codex `skill-creator` validator, only if you want to validate package structure locally
 
-## Core Rules
+## Core Principles
 
-- 모든 책 프로젝트는 먼저 분야, 책 유형, 독자, 현재 단계, 증거 부담, 위험도로 진단합니다.
-- 장르 분류와 작업 흐름 분류를 함께 사용합니다.
-- 답변은 일반 조언이 아니라 `Book Project Diagnosis`, `Research Plan`, `Table of Contents`, `Revision Checklist`, `Risk Register` 같은 명명된 산출물로 끝나야 합니다.
-- 고위험 주제는 `high-stakes-book-review` 기준을 적용하거나 명시적으로 라우팅합니다.
-- 복잡한 소설은 채팅 히스토리에만 의존하지 않고 `story-bible/` 또는 `story-bible-template/`를 기준으로 작업합니다.
-- 긴 설명과 기준 지식은 `references/` 또는 `research/`에 두고, `SKILL.md`는 실행 규칙과 출력 계약에 집중합니다.
+- Diagnose every book project by domain, book type, reader, current stage, evidence burden, and risk level.
+- Use both market/genre classification and workflow classification.
+- End responses with named deliverables, not loose advice.
+- Route high-risk topics through `high-stakes-book-review` or apply its review criteria directly.
+- For complex fiction, rely on explicit story bible files rather than chat history alone.
+- Keep long explanations and domain knowledge in `references/` or `research/`; keep `SKILL.md` focused on operating rules and output contracts.
 
 ## Skill Package Rules
 
-각 skill package는 다음 구조를 지켜야 합니다.
+Each skill package should follow this structure:
 
 ```text
 skills/<skill-name>/
@@ -79,27 +79,27 @@ skills/<skill-name>/
   references/
 ```
 
-규칙:
+Rules:
 
-- `SKILL.md` frontmatter에는 `name`과 `description`만 둡니다.
-- `name`은 디렉터리 이름과 같아야 합니다.
-- `description`은 언제 이 skill을 써야 하는지 구체적으로 설명해야 합니다.
-- `agents/openai.yaml`의 default prompt는 해당 `$skill-name`을 명시해야 합니다.
-- `SKILL.md`에서 언급한 `references/...` 파일은 실제로 존재해야 합니다.
-- `fiction-story-bible-manager`는 `assets/story-bible-template/`를 포함해야 합니다.
+- `SKILL.md` frontmatter should contain only `name` and `description`.
+- `name` must match the directory name.
+- `description` must clearly state when the skill should be used.
+- `agents/openai.yaml` must mention the matching `$skill-name` in its default prompt.
+- Every `references/...` path mentioned in `SKILL.md` must exist.
+- `fiction-story-bible-manager` must include `assets/story-bible-template/`.
 
 ## Story Bible Rules
 
-`story-bible-template/`는 장편 소설 프로젝트에 복사해서 쓰는 연속성 관리 문서 세트입니다.
+`story-bible-template/` is a reusable continuity system for long-form fiction projects.
 
-- 모든 엔티티에는 안정적인 ID를 둡니다.
-- 확정 정보와 아이디어를 섞지 않습니다.
-- 상태값은 `canon`, `proposed`, `uncertain`, `retconned`, `cut`을 사용합니다.
-- 시간순 사건과 원고상 공개 순서를 분리합니다.
-- 복선은 `setup_id`, 회수는 `payoff_id`로 연결합니다.
-- 문서 변경이 원고 수정을 요구하면 `revision-queue.md`에 기록합니다.
+- Every entity should have a stable ID.
+- Confirmed canon and speculative ideas should not be mixed.
+- Allowed status values are `canon`, `proposed`, `uncertain`, `retconned`, and `cut`.
+- Chronological event order and manuscript reveal order should be tracked separately.
+- Setups should connect to payoffs through `setup_id` and `payoff_id`.
+- Any story bible update that requires manuscript changes should be recorded in `revision-queue.md`.
 
-자세한 필드와 템플릿 규칙은 [docs/story-bible-schema.md](docs/story-bible-schema.md)를 봅니다.
+For field-level details, see [docs/story-bible-schema.md](docs/story-bible-schema.md).
 
 ## Documentation
 
@@ -124,13 +124,32 @@ export SKILL_CREATOR_VALIDATOR=/path/to/skill-creator/scripts/quick_validate.py
 scripts/verify-writer-collections.sh
 ```
 
+## Limitations
+
+- This is a skill and reference collection, not a full writing application.
+- It does not automatically install skills into every Codex environment.
+- It does not replace professional legal, medical, financial, editorial, or subject-matter review.
+- It does not manage citations, bibliographies, manuscripts, or project state through an external database.
+- It does not guarantee factual accuracy; high-risk claims still require source checking and expert review.
+- It does not remember long-form fiction canon unless the project uses explicit story bible files.
+- It does not yet include exhaustive genre-specific skills for every market category or publishing format.
+
+## Future Direction
+
+- Add clearer installation guidance for different Codex skill locations and workflows.
+- Add more example prompts and before/after output samples for each skill.
+- Expand genre-specific references for fiction, nonfiction, technical books, visual books, and children's books.
+- Add optional templates for research logs, interview plans, source matrices, and manuscript revision trackers.
+- Improve validation so package structure, links, references, and story bible templates can be checked in CI.
+- Add regression-style prompt tests that verify each skill routes to the expected deliverables.
+- Explore packaging or release automation for easier installation and versioning.
+
 ## Out of Scope
 
-- 전체 원고를 자동으로 대신 작성하는 시스템
-- 외부 DB나 웹 앱
-- 자동 인용 관리 도구 연동
-- 전문 법률, 의학, 금융 검토 대체
-- 채팅 히스토리만으로 장편 소설 설정을 기억하는 방식
+- Replacing the author, editor, researcher, or expert reviewer
+- Building a web app, external database, or automated citation manager
+- Generating a complete manuscript without author direction and review
+- Treating chat history as a reliable memory system for complex long-form projects
 
 ## Safety
 
